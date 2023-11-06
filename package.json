@@ -1,0 +1,20 @@
+{
+  "name": "aws-email-importer",
+  "version": "1.0.0",
+  "description": "Move Amazon messages to my inbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -e \"console.log(require('./index').handler(require('./event.json')));\"",
+    "package": "zip -r emailforward.zip . -x '.git/*' -x 'Credentials.json' -x './*.zip'"
+  },
+  "author": "Alison Aquinas",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "change-package-name": "^1.0.5",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "imap-promise": "^1.0.2",
+    "util": "^0.12.5"
+  }
+}
